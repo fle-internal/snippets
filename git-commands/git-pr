@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# get the upstream repository username
+upstream_repo=$(git config remote.upstream.url | sed 's/^.*://' | sed 's/\/.*$//')
+
+# open the PR against develop, or another branch specified as the first command-line argument
+upstream_branch=${1:-develop}
+
+# branch
+branch=$(git symbolic-ref HEAD | sed 's/refs\/heads\///')
+
+# make sure it's pushed
+git push origin $branch || exit "failed to push $branch"
+
+# get the user/project name
+project=$(git config remote.origin.url | sed 's/^.*://' | sed 's/\.git$//')
+
+# create pull request
+google-chrome "https://github.com/$project/compare/$upstream_repo:$upstream_branch...$branch"
