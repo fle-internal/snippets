@@ -27,6 +27,10 @@ def pairup(core, interns=None):
             pair.append(intern)
     return map(tuple, pairings)
 
+def get_leader(group):
+    """Return one random person as the leader (person responsible to schedule) of the group"""
+    return random.choice(group)
+
 
 def main():
     core = ['ben', 'dylan', 'jamie', 'guan', 'richard', 'rui', 'alexsandra', 'steve']
@@ -34,8 +38,12 @@ def main():
     groups = pairup(core, interns)
     for i, group in enumerate(groups):
         print "Group %d" % (i + 1)
+        leader = get_leader(group)
         for person in group:
-            print "    %s" % person
+            if person == leader: 
+                print "    %s (responsible for scheduling group meeting this week)" % person 
+            else: 
+                print "    %s" % person
 
 if __name__ == '__main__':
     main()
