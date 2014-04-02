@@ -62,7 +62,7 @@ for item in data:
 #         except:
 #             print a
 
-html = t.render({"csv": unicode_data}).replace(u"\u2019", "'").replace("\n", "<br/>").replace(u"\xa0"," ").replace(u"\u201c", '"').replace(u"\u201d", '"').replace(u"\u2013", '-')
+html = t.render({"csv": unicode_data}).replace(u"\u2019", "'").replace("\n", "<br/>").replace(u"\xa0"," ").replace(u"\u201c", '"').replace(u"\u201d", '"').replace(u"\u2013", '-').replace(u"\xe9", '/n').replace(u"\u2014", '--')
 
 f.write(html)
 
