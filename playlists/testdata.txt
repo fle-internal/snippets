@@ -1,0 +1,14 @@
+Playlist: Write and retell multiplication tables
+subtitle: Week 1
+/v/multiplication-intro/
+/v/multiplication-as-groups-of-objects/
+/v/more-on-the-concept-of-multiplication/
+/v/number-line-1/
+/e/number_line/
+subtitle: Week 2
+/v/basic-multiplication/
+/e/multiplication_0.5/
+/v/multiplication-2--the-multiplication-tables/
+quiz
+/v/multiplying-whole-numbers-and-applications-1/
+/v/multiplication-3--10-11-12-times-tables/
