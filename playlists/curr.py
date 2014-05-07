@@ -112,6 +112,8 @@ def main():
                 fsm.saw_exercise(line=line, **event_args)
             elif 'quiz' in line:
                 fsm.saw_quiz(line=line, **event_args)
+            elif line == '\n':
+                continue
             else:
                 raise Exception('Error at line number %s: Unknown field "%s"' % (lineno, line))
         else:
