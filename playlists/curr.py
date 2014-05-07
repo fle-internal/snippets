@@ -1,6 +1,7 @@
 import fysom
 import os
 import sys
+from pprint import pprint
 
 
 def initialize_fsm():
@@ -42,7 +43,12 @@ def initialize_fsm():
         'callbacks': {
             'onnew_playlist': new_playlist,
             'oneof': eof,
+            'onsaw_divider': saw_divider,
+            'onsaw_video': saw_misc_entry,
+            'onsaw_exercise': saw_misc_entry,
+            'onsaw_quiz': saw_misc_entry,
         }})
+
 
 # FSM callbacks
 def new_playlist(e):
@@ -56,9 +62,35 @@ def new_playlist(e):
 
 def eof(e):
     e.playlists.append(e.playlist)
-    print e.playlists
+    pprint(e.playlists)
 
 
+def saw_misc_entry(e):
+    playlist = e.playlist
+
+    if not playlist.get('entries'):
+        playlist['entries'] = []
+
+    kind = e.event.replace('saw_', '')
+    entry = {'entity_kind': kind.capitalize(),
+             'entity_id': e.line,
+             'sort_order': len(playlist['entries']) - 1 if playlist['entries'] else 0,
+    }
+    playlist['entries'].append(entry)
+
+
+def saw_divider(e):
+    if not e.playlist.get('entries'):
+        e.playlist['entries'] = []
+
+    line = e.line.replace('subtitle: ', '')
+    entry = {'entity_kind': 'Divider',
+             'sort_order': len(e.playlist['entries']) - 1 if e.playlist['entries'] else 0,
+             'description': line,
+    }
+    e.playlist['entries'].append(entry)
+
+# main function
 def main():
     testdata_path = os.path.join(os.path.dirname(__file__), 'testdata.txt')
 
@@ -73,13 +105,13 @@ def main():
             if 'Playlist:' in line:
                 fsm.saw_new_playlist(line=line, **event_args)
             elif 'subtitle:' in line:
-                fsm.saw_divider()
+                fsm.saw_divider(line=line, **event_args)
             elif '/v/' in line:
-                fsm.saw_video()
+                fsm.saw_video(line=line, **event_args)
             elif '/e/' in line:
-                fsm.saw_exercise()
+                fsm.saw_exercise(line=line, **event_args)
             elif 'quiz' in line:
-                fsm.saw_quiz()
+                fsm.saw_quiz(line=line, **event_args)
             else:
                 raise Exception('Error at line number %s: Unknown field "%s"' % (lineno, line))
         else:
