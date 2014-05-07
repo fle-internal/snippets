@@ -1,4 +1,5 @@
 import fysom
+import json
 import os
 import sys
 from pprint import pprint
@@ -62,7 +63,8 @@ def new_playlist(e):
 
 def eof(e):
     e.playlists.append(e.playlist)
-    pprint(e.playlists)
+    # pprint(e.playlists)
+    pprint(json.dumps(e.playlists))
 
 
 def saw_misc_entry(e):
