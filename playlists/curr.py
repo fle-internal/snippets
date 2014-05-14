@@ -1,7 +1,6 @@
 import fysom
 import json
 import os
-import sys
 from pprint import pprint
 
 
@@ -63,7 +62,11 @@ def new_playlist(e):
 
 def eof(e):
     e.playlists.append(e.playlist)
-    # pprint(e.playlists)
+
+    # add the playlist id
+    for id, playlist in enumerate(e.playlists):
+        playlist['id'] = id
+
     pprint(json.dumps(e.playlists))
 
 
