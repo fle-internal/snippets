@@ -11,32 +11,47 @@ def initialize_fsm():
         'events': [
             {
                 'name': 'saw_divider',
-                'src': ['quiz_entry', 'video_entry', 'exercise_entry', 'new_playlist'],
+                'src': ['quiz_entry',
+                        'video_entry',
+                        'exercise_entry',
+                        'new_playlist'],
                 'dst': 'divider_entry'
             },
             {
                 'name': 'saw_video',
-                'src': ['divider_entry', 'video_entry', 'exercise_entry', 'quiz_entry', 'new_playlist'],
+                'src': ['divider_entry',
+                        'video_entry',
+                        'exercise_entry',
+                        'quiz_entry',
+                        'new_playlist'],
                 'dst': 'video_entry'
             },
             {
                 'name': 'saw_exercise',
-                'src': ['new_playlist', 'quiz_entry', 'video_entry', 'exercise_entry'],
+                'src': ['new_playlist',
+                        'quiz_entry',
+                        'video_entry',
+                        'exercise_entry'],
                 'dst': 'exercise_entry'
             },
             {
                 'name': 'saw_quiz',
-                'src': ['exercise_entry', 'video_entry'],
+                'src': ['exercise_entry',
+                        'video_entry'],
                 'dst': 'quiz_entry',
             },
             {
                 'name': 'saw_new_playlist',
-                'src': ['startup', 'video_entry', 'exercise_entry'],
+                'src': ['startup',
+                        'video_entry',
+                        'exercise_entry'],
                 'dst': 'new_playlist',
             },
             {
                 'name': 'eof',
-                'src': ['video_entry', 'quiz_entry', 'exercise_entry'],
+                'src': ['video_entry',
+                        'quiz_entry',
+                        'exercise_entry'],
                 'dst': 'end',
             }
         ],
@@ -53,7 +68,9 @@ def initialize_fsm():
 # FSM callbacks
 def new_playlist(e):
 
-    if e.playlist:         # if our current playlist is empty, dont create a new one since it's just a waste
+    # if our current playlist is empty, dont create a new one since
+    # it's just a waste
+    if e.playlist:
         e.playlists.append(e.playlist.copy())
 
     line = e.line.replace('Playlist: ', '')
@@ -77,9 +94,11 @@ def saw_misc_entry(e):
         playlist['entries'] = []
 
     kind = e.event.replace('saw_', '')
-    entry = {'entity_kind': kind.capitalize(),
-             'entity_id': e.line,
-             'sort_order': len(playlist['entries']) - 1 if playlist['entries'] else 0,
+    entries = playlist['entries']
+    entry = {
+        'entity_kind': kind.capitalize(),
+        'entity_id': e.line,
+        'sort_order': len(entries) - 1 if entries else 0,
     }
     playlist['entries'].append(entry)
 
@@ -89,11 +108,14 @@ def saw_divider(e):
         e.playlist['entries'] = []
 
     line = e.line.replace('subtitle: ', '')
-    entry = {'entity_kind': 'Divider',
-             'sort_order': len(e.playlist['entries']) - 1 if e.playlist['entries'] else 0,
-             'description': line,
+    entries = e.playlist['entries']
+    entry = {
+        'entity_kind': 'Divider',
+        'sort_order': len(entries) - 1 if entries else 0,
+        'description': line,
     }
     e.playlist['entries'].append(entry)
+
 
 # main function
 def main():
@@ -120,7 +142,8 @@ def main():
             elif line == '\n':
                 continue
             else:
-                raise Exception('Error at line number %s: Unknown field "%s"' % (lineno, line))
+                err_msg_template = 'Error at line no %s: Unknown field "%s"'
+                raise Exception(err_msg_template % (lineno, line))
         else:
             fsm.eof(**event_args)
 
