@@ -96,7 +96,7 @@ def saw_misc_entry(e):
     entry = {
         'entity_kind': kind.capitalize(),
         'entity_id': e.entity_id,
-        'sort_order': len(entries) - 1 if entries else 0,
+        'sort_order': len(entries) if entries else 0,
     }
     playlist['entries'].append(entry)
 
