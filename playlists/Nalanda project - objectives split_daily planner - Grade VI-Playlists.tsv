@@ -1,9 +1,9 @@
-Index	Link	Playlist_ID	Essential/Optional (E/O)
-			
-	Baseline exam	g5_p1, g5_p2, g5_p3, g5_p4, g5_p5, g5_p6, g5_p7, g5_p8, g5_p9, g5_p10, g5_p11, g5_p12, g5_p13, g5_p14, g5_p15, g5_p16, g5_p17, g5_p18, g5_p19, g5_p20, g5_p21	
-			
+Index	Link	Playlist ID	Essential/Optional (E/O)
+
+	Baseline exam	g5_p1, g5_p2, g5_p3, g5_p4, g5_p5, g5_p6, g5_p7, g5_p8, g5_p9, g5_p10, g5_p11, g5_p12, g5_p13, g5_p14, g5_p15, g5_p16, g5_p17, g5_p18, g5_p19, g5_p20, g5_p21
+
 	Playlist 1: Test of divisibility and prime numbers	g6_p1	E
-	Subtitle: Week 1	g6_p1	
+	Subtitle: Week 1	g6_p1
 Video 1	/v/divisibility-tests-for-2--3--4--5--6--9--10/	g6_p1	E
 Video 2	/v/recognizing-divisibility/	g6_p1	E
 Video 3	/v/the-why-of-the-3-divisibility-rule/	g6_p1	E
@@ -12,7 +12,7 @@ Exercise 1	/e/divisibility_tests/	g6_p1	E
 Video 5	/v/prime-numbers/	g6_p1	E
 Video 6	/v/recognizing-prime-numbers/	g6_p1	E
 Exercise 2	/e/composite_numbers/	g6_p1	E
-	Subtitle: Week 2		
+	Subtitle: Week 2
 Video 7	/v/prime-factorization/	g6_p1	E
 Video 8	/v/prime-factorization-exercise/	g6_p1	E
 Video 9	/v/the-fundamental-theorem-of-arithmetic/	g6_p1	E
@@ -20,9 +20,9 @@ Video 10	/v/common-divisibility-examples/	g6_p1	E
 Exercise 3	/e/prime_factorization/	g6_p1	E
 Exercise 4	/e/the_fundamental_theorem_of_arithmetic/	g6_p1	E
 Exercise 5	/e/divisibility/	g6_p1	E
-			
+
 	Playlist 2: LCM and GCF	g6_p2	E
-	Subtitle: Week 3	g6_p2	
+	Subtitle: Week 3	g6_p2
 Video 1	/v/least-common-multiple-exercise/	g6_p2	E
 Video 2	/v/least-common-multiple-exercise-2/	g6_p2	E
 Video 3	/v/least-common-multiple--lcm/	g6_p2	E
@@ -34,17 +34,17 @@ Video 7	/v/lcm-and-gcf-greatest-common-factor--word-problems/	g6_p2	E
 Exercise 2	/e/greatest_common_divisor/	g6_p2	E
 Exercise 3	/e/least_common_multiple_and_greatest_common_divisor_word_problems/	g6_p2	E
 	Quiz 1	g6_p1, g6_p2	E
-			
+
 	Playlist 3: Order of operations	g6_p3	E
-	Subtitle: Week 4	g6_p3	
+	Subtitle: Week 4	g6_p3
 Video 1	/v/constructing-numerical-expressions-example/	g6_p3	E
 Video 2	/v/evaluating-an-expression-with-and-without-parentheses/	g6_p3	E
 Video 3	/v/introduction-to-order-of-operations/	g6_p3	E
 Video 4	/v/order-of-operations/	g6_p3	E
 Exercise 1	/e/order_of_operations	g6_p3	E
-			
+
 	Playlist 4: Commutative. distributive and associative properties	g6_p4	E
-	Subtitle: Week 5	g6_p4	
+	Subtitle: Week 5	g6_p4
 Video 1	/v/the-distributive-property/	g6_p4	E
 Video 2	/v/the-distributive-property-2/	g6_p4	E
 Exercise 1	/e/distributive_property/	g6_p4	E
@@ -55,9 +55,9 @@ Video 6	/v/associative-law-of-addition/	g6_p4	E
 Video 7	/v/associative-law-of-multiplication/	g6_p4	E
 	Quiz 2	g6_p3, g6_p4	E
 	Unit Test 1	g6_p1, g6_p2, g6_p3, g6_p4	E
-			
+
 	Playlist 5: Write and identify a number using the base/index notation	g6_p5	E
-	Subtitle: Week 6	g6_p5	
+	Subtitle: Week 6	g6_p5
 Video 1	/v/introduction-to-exponents/	g6_p5	E
 Video 2	/v/raising-a-number-to-the-0th-and-1st-power/	g6_p5	E
 Video 3	/v/powers-of-1-and---1/	g6_p5	E
@@ -66,15 +66,15 @@ Video 5	/v/powers-of-zero/	g6_p5	E
 Video 6	/v/understanding-exponents-2/	g6_p5	E
 Video 7	/v/understanding-exponents/	g6_p5	E
 Exercise 1	/e/exponents_1/	g6_p5	E
-	Subtitle: Week 7		
+	Subtitle: Week 7
 Video 8	/v/exponent-rules-part-1/	g6_p5	E
 Video 9	/v/exponent-rules-part-2/	g6_p5	E
 Video 10	/v/exponent-properties-involving-quotients/	g6_p5	E
 Exercise 2	/e/exponent_rules/	g6_p5	E
 	Quiz 3	g6_p5	E
-			
+
 	Playlist 6: Square and square roots	g6_p6	E
-	Subtitle: Week 8		
+	Subtitle: Week 8
 Video 1	/v/understanding-square-roots/	g6_p6	E
 Video 2	/v/approximating-square-roots/	g6_p6	E
 Video 3	/v/simplifying-square-roots-1/	g6_p6	E
@@ -85,7 +85,7 @@ Exercise 2	/e/square_roots_2/	g6_p6	E
 Exercise 3	/e/simplifying_radicals/	g6_p6	E
 Exercise 4	/e/multiplying_radicals/	g6_p6	E
 	Quiz 4	g6_p6	E
-			
+
 	Playlist 7: Integer and integer operations	g6_p7	E
 	Subtitle: Week 8	g6_p7	E
 Video 1	/v/negative-numbers-introduction/	g6_p7	E
@@ -97,7 +97,7 @@ Exercise 3	/e/ordering_negative_numbers/	g6_p7	E
 Video 4	/v/adding-negative-numbers/	g6_p7	E
 Video 5	/v/adding-integers-with-different-signs/	g6_p7	E
 Video 6	/v/adding-and-subtracting-negative-number-examples/	g6_p7	E
-	Subtitle: Week 9	g6_p7	
+	Subtitle: Week 9	g6_p7
 Video 7	/v/why-subtracting-a-negative-equivalent-to-adding-a-positive/	g6_p7	E
 Video 8	/v/negative-number-word-problems-1/	g6_p7	E
 Video 9	/v/u09-l1-t2-we4-adding-real-numbers-application/	g6_p7	E
@@ -113,9 +113,9 @@ Video 11	/v/multiplying-negative-real-numbers/	g6_p7	E
 Video 12	/v/multiplying-and-dividing-negative-numbers/	g6_p7	E
 Exercise 7	/e/multiplying_and_dividing_negative_numbers/	g6_p7	E
 	Quiz 5	g6_p7	E
-			
+
 	Playlist 8: Interpret and draw bar graphs	g6_p8	E
-	Subtitle: Week 10	g6_p8	
+	Subtitle: Week 10	g6_p8
 Video 1	/v/reading-tables-1/	g6_p8	E
 Video 2	/v/reading-tables-2/	g6_p8	E
 Exercise 1	 /e/reading_tables_1/	g6_p8	E
@@ -126,7 +126,7 @@ Exercise 3	/e/reading_stem_and_leaf_plots/	g6_p8	E
 Video 5	/v/reading-pictographs/	g6_p8	E
 Exercise 4	/e/reading_pictographs_1/	g6_p8	E
 Exercise 5	/e/reading_pictographs_2/	g6_p8	E
-	Subtitle: Week 11	g6_p8	
+	Subtitle: Week 11	g6_p8
 Video 6	v/reading-bar-graphs/	g6_p8	E
 Video 7	/v/histograms/	g6_p8	E
 Video 8	/v/reading-bar-charts-1/	g6_p8	E
@@ -140,9 +140,9 @@ Exercise 9	/e/reading_bar_charts_3/ 	g6_p8	E
 Video 12	/v/u08-l1-t2-we2-reading-line-graphs/	g6_p8	E
 Video 13	/v/reading-pie-graphs--circle-graphs/	g6_p8	E
 	Quiz 6	g6_p8	E
-			
+
 	Playlist 9: Perimeter and area of triangles	g6_p9	E
-	Subtitle: Week 12	g6_p9	
+	Subtitle: Week 12	g6_p9
 Video 1	/v/perimeter-and-area-basics/	g6_p9	E
 Video 2	/v/triangle-area-proofs/	g6_p9	E
 Video 3	/v/interesting-perimeter-and-area-problems/	g6_p9	E
@@ -151,9 +151,9 @@ Video 5	/v/area-of-an-equilateral-triangle/	g6_p9	E
 Video 6	/v/area-of-shaded-region-made-from-equilateral-triangles/	g6_p9	E
 Exercise 1	/e/area_of_triangles_1/	g6_p9	E
 Exercise 2	/e/shaded_areas/	g6_p9	E
-			
+
 	Playlist 10: Perimeter and area of quadrilaterals	g6_p10	E
-	Subtitle: Week 13	g6_p10	
+	Subtitle: Week 13	g6_p10
 Video 1	/v/quadrilateral-overview/	g6_p10	E
 Video 2	/v/quadrilateral-properties/	g6_p10	E
 Video 3	/v/area-of-a-parallelogram/	g6_p10	E
@@ -165,9 +165,9 @@ Exercise 1	/e/area_of_parallelograms/	g6_p10	E
 Exercise 2	/e/areas_of_trapezoids_rhombi_and_kites/	g6_p10	E
 	Quiz 7	g6_p9, g6_p10	E
 	Unit Test-2	g6_p5, g6_p6, g6_p7, g6_p8, g6_p9, g6_p10	E
-			
+
 	Playlist 11: Ratio and proportion	g6_p11	E
-	Subtitle: Week 14	g6_p11	
+	Subtitle: Week 14	g6_p11
 Video 1	/v/introduction-to-ratios--new-hd-version/	g6_p11	E
 Video 2	/v/ratios-as-fractions-in-simplest-form/	g6_p11	E
 Video 3	/v/simplifying-rates-and-ratios/	g6_p11	E
@@ -183,9 +183,9 @@ Video 10	/v/solving-ratio-problems-with-tables-exercise-3/	g6_p11	E
 Exercise 2	/e/ratio_word_problems/	g6_p11	E
 Video 11	/v/rational-number-word-problem-example-1/	g6_p11	E
 Video 12	/v/rational-number-word-problem-example-2/	g6_p11	E
-			
+
 	Playlist 12: Find the missing quantity, when 2 out of 3 quantities are given (principal, rate of interest, period)	g6_p12	O
-	Subtitle: Week 16	g6_p12	
+	Subtitle: Week 16	g6_p12
 Video 1	/v/solving-percent-problems/	g6_p12	O
 Video 2	/v/solving-percent-problems-2/	g6_p12	O
 Video 3	/v/solving-percent-problems-3/	g6_p12	O
@@ -193,17 +193,17 @@ Video 4	/v/growing-by-a-percentage/	g6_p12	O
 Exercise 1	/e/discount_tax_and_tip_word_problems/	g6_p12	O
 Exercise 2	/e/markup_and_commission_word_problems/	g6_p12	O
 	Quiz 8	g6_p11, g6_p12	E
-			
-			
+
+
 	Playlist 13: Oveview and history of algebra	g6_p13	E
-	Subtitle: Week 17	g6_p13	
+	Subtitle: Week 17	g6_p13
 Video 1	/v/origins-of-algebra/	g6_p13	E
 Video 2	/v/abstract-ness/	g6_p13	E
 Video 3	/v/the-beauty-of-algebra/	g6_p13	E
 Video 4	/v/descartes-and-cartesian-coordinates/	g6_p13	E
 Video 5	/v/why-all-the-letters-in-algebra/	g6_p13	E
 	Unit Test-3 	g6_p11, g6_p12, g6_p13	E
-			
+
 	Playlist 14: The why of algebra	g6_p14	E
 Video 1	 /v/why-we-do-the-same--thing-to-both-sides--simple-equations/	g6_p14	E
 Video 2	/v/representing-a-relationship-with-a-simple-equation/	g6_p14	E
@@ -211,16 +211,16 @@ Video 3	/v/one-step-equation-intuition/	g6_p14	E
 Video 4	/v/one-step-equation-intuition-exercise-intro/	g6_p14	E
 Video 5	/v/adding-and-subtracting-the-same-thing-from-both-sides/	g6_p14	E
 Video 6	/v/intuition-why-we-divide-both-sides/	g6_p14	E
-	Subtitle: Week 18	g6_p14	
+	Subtitle: Week 18	g6_p14
 Video 7	/v/why-we-do-the-same--thing-to-both-sides--two-step-equations/	g6_p14	E
 Video 8	/v/why-we-do-the-same--thing-to-both-sides-multi-step-equations/	g6_p14	E
 Video 9	/v/why-we-do-the-same--thing-to-both-sides-basic-systems/	g6_p14	E
 Video 10	/v/why-all-the-letters-in-algebra/	g6_p14	E
 Exercise 1	 /e/one_step_equation_intuition/	g6_p14	E
 	Quiz 9	g6_p13, g6_p14	E
-			
+
 	Playlist 15: Algebra-variables and expressions	g6_p15	E
-	Subtitle: Week 19	g6_p15	
+	Subtitle: Week 19	g6_p15
 Video 1	/v/what-is-a-variable/	g6_p15	E
 Video 2	/v/why-aren-t-we-using-the-multiplication-sign/	g6_p15	E
 Video 3	/v/variables-and-expressions-1/	g6_p15	E
@@ -230,16 +230,16 @@ Video 5	/v/ca-algebra-i--number-properties-and-absolute-value/	g6_p15	E
 Video 6	/v/properties-of-numbers-1/	g6_p15	E
 Video 7	/v/number-properties-terminology-1/	g6_p15	E
 Video 8	/v/identity-property-of-1/	g6_p15	E
-			
+
 	Playlist 16: Determining length of a segment using algebra	g6_p16	E
-	Subtitle: Week 20	g6_p16	
+	Subtitle: Week 20	g6_p16
 Video 1	/v/segment-addition/	g6_p16	E
 Exercise 1	/e/segment_addition/	g6_p16	E
 Video 2	/v/midpoint-of-a-segment/	g6_p16	E
 Exercise 2	/e/midpoint_of_a_segment/	g6_p16	E
 Video 3	/v/challenging-perimeter-problem/	g6_p16	E
 	Quiz 10	g6_p15, g6_p16	E
-			
+
 	Playlist 17: Dividing decimals	g6_p17	E
 Video 1	v/dividing-completely-to-get-decimal-answer/	g6_p17	E
 Video 2	/v/dividing-completely-to-get-decimal-answer-example-2/	g6_p17	E
@@ -250,9 +250,9 @@ Video 6	/v/dividing-decimal/	g6_p17	E
 Exercise 1	/e/dividing_decimals_0.5/	g6_p17	E
 Exercise 1	/e/dividing_decimals_1/	g6_p17	E
 Exercise 3	/e/dividing_decimals_2/	g6_p17	E
-			
+
 	Playlist 18: Converting between fractions and decimals	g6_p18	E
-	Subtitle: Week 21	g6_p18	
+	Subtitle: Week 21	g6_p18
 Video 1	/v/converting-fractions-to-decimals--ex1/	g6_p18	E
 Video 2	/v/converting-fractions-to-decimals--ex2/	g6_p18	E
 Video 3	/v/converting-fractions-to-decimals/	g6_p18	E
@@ -268,9 +268,9 @@ Exercise 2	/e/converting_decimals_to_fractions_1/	g6_p18	E
 Exercise 3	/e/converting_decimals_to_fractions_2/	g6_p18	E
 	Quiz 11	g6_p17, g6_p18	E
 	Unit Test-4	g6_p14, g6_p15, g6_p16, g6_p17, g6_p18	E
-			
+
 	Playlist 19: Percentages	g6_p19	E
-	Subtitle: Week 22	g6_p19	
+	Subtitle: Week 22	g6_p19
 Video 1	/v/describing-the-meaning-of-percent/	g6_p19	E
 Video 2	/v/describing-the-meaning-of-percent-2/	g6_p19	E
 Video 3	/v/representing-a-number-as-a-decimal--percent--and-fraction/	g6_p19	E
@@ -294,9 +294,9 @@ Video 17	/v/solving-percent-problems-3/	g6_p19	E
 Exercise 4	/e/discount_tax_and_tip_word_problems/	g6_p19	E
 Exercise 5	/e/markup_and_commission_word_problems/	g6_p19	E
 	Quiz 12	g6_p19	E
-			
+
 	Playlist 20: Estimating and rounding decimals/decimal multiplication by 10	g6_p20	E
-	Subtitle: Week 23	g6_p20	
+	Subtitle: Week 23	g6_p20
 Video 1	/v/rounding-decimals/	g6_p20	E
 Exercise 1	/e/rounding_numbers/	g6_p20	E
 Video 2	/v/estimation-with-decimals/	g6_p20	E
@@ -307,9 +307,9 @@ Video 5	/v/dividing-decimals-2-1/	g6_p20	E
 Exercise 3	/e/understanding_moving_the_decimal/	g6_p20	E
 Exercise 4	/e/converting_fractions_to_decimals_0.5/	g6_p20	E
 	Quiz 13	g6_p20	E
-			
+
 	Playlist 21: Introduction to Geometry	g6_p21	E
-	Subtitle: Week 24	g6_p21	
+	Subtitle: Week 24	g6_p21
 Video 1	/v/euclid-as-the-father-of-geometry/	g6_p21	E
 Video 2	/v/language-and-notation-of-basic-geometry/	g6_p21	E
 Video 3	/v/lines--line-segments--and-rays/	g6_p21	E
@@ -318,9 +318,9 @@ Video 5	/v/specifying-planes-in-three-dimensions/	g6_p21	E
 Exercise 1	e/recognizing_rays_lines_and_line_segments/	g6_p21	E
 Video 6	/v/the-golden-ratio/	g6_p21	E
 Exercise 2	/e/points_lines_and_planes/	g6_p21	E
-			
+
 	Playlist 22: Angles and types of angles	g6_p22	E
-	Subtitle: Week 25	g6_p22	
+	Subtitle: Week 25	g6_p22
 Video 1	/v/angles-at-the-intersection-of-two-lines/	g6_p22	E
 Video 2	/v/using-algebra-to-find-the-measures-of-vertical-angles/	g6_p22	E
 Video 3	/v/proof-vertical-angles-are-equal/	g6_p22	E
@@ -341,9 +341,9 @@ Exercise 6	/e/complementary_and_supplementary_angles/	g6_p22	E
 Exercise 7	/e/angle_addition_postulate/	g6_p22	E
 	Quiz 14	g6_p21, g6_p22	E
 	Unit Test-5	g6_p19, g6_p20, g6_21, g6_p22	E
-			
+
 	Playlist 23: Angles, triangles and polygons-1	g6_p23	E
-	Subtitle: Week 26	g6_p23	
+	Subtitle: Week 26	g6_p23
 Video 1	/v/proof---sum-of-measures-of-angles-in-a-triangle-are-180/	g6_p23	E
 Video 2	/v/triangle-angle-example-1/	g6_p23	E
 Video 3	/v/triangle-angle-example-2/	g6_p23	E
@@ -351,15 +351,15 @@ Video 4	/v/proof---corresponding-angle-equivalence-implies-parallel-lines/	g6_p2
 Exercise 1	/e/angles_1/	g6_p23	E
 Exercise 2	/e/angles_2/	g6_p23	E
 	Quiz 15	g6_p23	E
-			
+
 	Playlist 24: Angles, triangles and polygons-2	g6_p24	E
 Video 1	/v/finding-more-angles/	g6_p24	E
 Video 2	/v/sum-of-interior-angles-of-a-polygon/	g6_p24	E
 Video 3	/v/sum-of-the-exterior-angles-of-convex-polygon/	g6_p24	E
 Exercise 1	/e/angles_of_a_polygon/	g6_p24	E
-			
+
 	Playlist 25: Circles	g6_p25	E
-	Subtitle: Week 27	g6_p25	
+	Subtitle: Week 27	g6_p25
 Video 1	/v/language-and-notation-of-the-circle/	g6_p25	E
 Video 2	/v/circles--radius--diameter-and-circumference/	g6_p25	E
 Video 3	/v/length-of-an-arc-that-subtends-a-central-angle/	g6_p25	E
