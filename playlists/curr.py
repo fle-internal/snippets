@@ -1,5 +1,6 @@
 import csv
 import fysom
+import json
 import pathlib
 from pprint import pprint
 
@@ -118,7 +119,12 @@ def generate_playlist_from_tsv(tsv_path, fsm):
     with open(tsv_path.as_posix()) as f:
         tsv = csv.DictReader(f, delimiter='\t')
 
-        event_default_args = {'playlists': [], 'playlist': {}}
+        current_playlist = {}
+        playlists = []
+        event_default_args = {
+            'playlists': playlists,
+            'playlist': current_playlist
+        }
         for row in tsv:
 
             # Maybe we got a new playlist
@@ -180,17 +186,21 @@ def generate_playlist_from_tsv(tsv_path, fsm):
                     raise Exception(err_msg_template % (tsv_path, row))
 
         else:
-            fsm.eof(**event_default_args)
+            playlists.append(current_playlist)
+            return playlists
 
 
 def main_tsv_playlists():
     cwd = pathlib.Path('.')
     tsv_files = cwd.glob("*Playlists.tsv")
 
+    playlists = []
+    fsm = initialize_fsm()
     for tsv_file in tsv_files:
-        fsm = initialize_fsm()
-        generate_playlist_from_tsv(tsv_file, fsm)
-    pass
+        playlists_this_file = generate_playlist_from_tsv(tsv_file, fsm)
+        playlists.extend(playlists_this_file)
+
+    pprint(json.dumps(playlists))
 
 
 if __name__ == '__main__':
