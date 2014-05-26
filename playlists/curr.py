@@ -1,6 +1,6 @@
+import csv
 import fysom
-import json
-import os
+import pathlib
 from pprint import pprint
 
 
@@ -30,6 +30,7 @@ def initialize_fsm():
                 'name': 'saw_exercise',
                 'src': ['new_playlist',
                         'quiz_entry',
+                        'divider_entry',
                         'video_entry',
                         'exercise_entry'],
                 'dst': 'exercise_entry'
@@ -44,6 +45,7 @@ def initialize_fsm():
                 'name': 'saw_new_playlist',
                 'src': ['startup',
                         'video_entry',
+                        'quiz_entry',
                         'exercise_entry'],
                 'dst': 'new_playlist',
             },
@@ -73,18 +75,14 @@ def new_playlist(e):
     if e.playlist:
         e.playlists.append(e.playlist.copy())
 
-    line = e.line.replace('Playlist: ', '')
-    e.playlist['title'] = line
+    e.playlist['title'] = e.playlist_title
+    e.playlist['id'] = e.playlist_id
 
 
 def eof(e):
     e.playlists.append(e.playlist)
 
-    # add the playlist id
-    for id, playlist in enumerate(e.playlists):
-        playlist['id'] = id
-
-    pprint(json.dumps(e.playlists))
+    pprint(e.playlists)
 
 
 def saw_misc_entry(e):
@@ -97,7 +95,7 @@ def saw_misc_entry(e):
     entries = playlist['entries']
     entry = {
         'entity_kind': kind.capitalize(),
-        'entity_id': e.line,
+        'entity_id': e.entity_id,
         'sort_order': len(entries) - 1 if entries else 0,
     }
     playlist['entries'].append(entry)
@@ -107,46 +105,93 @@ def saw_divider(e):
     if not e.playlist.get('entries'):
         e.playlist['entries'] = []
 
-    line = e.line.replace('subtitle: ', '')
     entries = e.playlist['entries']
     entry = {
         'entity_kind': 'Divider',
         'sort_order': len(entries) - 1 if entries else 0,
-        'description': line,
+        'description': e.description,
     }
     e.playlist['entries'].append(entry)
 
 
-# main function
-def main():
-    testdata_path = os.path.join(os.path.dirname(__file__), 'testdata.txt')
+def generate_playlist_from_tsv(tsv_path, fsm):
+    with open(tsv_path.as_posix()) as f:
+        tsv = csv.DictReader(f, delimiter='\t')
 
-    fsm = initialize_fsm()
-    lineno = 0
+        event_default_args = {'playlists': [], 'playlist': {}}
+        for row in tsv:
 
-    event_args = {'playlists': [], 'playlist': {}}
-    with open(testdata_path) as f:
-        for line in iter(f.readline, ''):
-            line = line.rstrip('\n')
-            lineno += 1
-            if 'Playlist:' in line:
-                fsm.saw_new_playlist(line=line, **event_args)
-            elif 'subtitle:' in line:
-                fsm.saw_divider(line=line, **event_args)
-            elif '/v/' in line:
-                fsm.saw_video(line=line, **event_args)
-            elif '/e/' in line:
-                fsm.saw_exercise(line=line, **event_args)
-            elif 'quiz' in line:
-                fsm.saw_quiz(line=line, **event_args)
-            elif line == '\n':
+            # Maybe we got a new playlist
+            playlist_title = row['Index'] or row['Link']
+            if 'Playlist' in playlist_title:
+
+                # invalid format for new playlist row, skip
+                if not row['Playlist ID']:
+                    continue
+                else:  # valid playlist title
+                    fsm.saw_new_playlist(
+                        playlist_id=row['Playlist ID'],
+                        playlist_title=playlist_title,
+                        **event_default_args
+                    )
+
+            elif 'subtitle' in row['Link'].lower():  # we got a subtitle row
+                fsm.saw_divider(
+                    description=row['Link'],
+                    **event_default_args
+                )
+
+            elif 'video' in row['Index'].lower():  # we got a video row
+                fsm.saw_video(
+                    entity_id=row['Link'],
+                    **event_default_args
+                )
+
+            elif 'exercise' in row['Index'].lower():  # we got an exercise row
+                fsm.saw_exercise(
+                    entity_id=row['Link'],
+                    **event_default_args
+                )
+
+            elif 'quiz' in row['Link'].lower():  # we got a video row
+                fsm.saw_quiz(
+                    entity_id=row['Link'],
+                    **event_default_args
+                )
+
+            elif 'baseline exam' in row['Link'].lower():
+                # Skip for now
+                # TODO: handle this
                 continue
+
+            elif 'unit test' in row['Link'].lower():
+                # Skip for now
+                # TODO: handle this
+                continue
+
+            # Whatever is that we get here, we don't understand it.
+            # Print it out if it's not empty.
             else:
-                err_msg_template = 'Error at line no %s: Unknown field "%s"'
-                raise Exception(err_msg_template % (lineno, line))
+                # Empty row, don't bother printing
+                if row['Index'] == row['Link'] == '':
+                    continue
+                else:
+                    err_msg_template = "Don't understand row from file %s: %s"
+                    raise Exception(err_msg_template % (tsv_path, row))
+
         else:
-            fsm.eof(**event_args)
+            fsm.eof(**event_default_args)
+
+
+def main_tsv_playlists():
+    cwd = pathlib.Path('.')
+    tsv_files = cwd.glob("*Playlists.tsv")
+
+    for tsv_file in tsv_files:
+        fsm = initialize_fsm()
+        generate_playlist_from_tsv(tsv_file, fsm)
+    pass
 
 
 if __name__ == '__main__':
-    main()
+    main_tsv_playlists()
