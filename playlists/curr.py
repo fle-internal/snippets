@@ -197,15 +197,25 @@ def generate_playlist_from_tsv(tsv_path, fsm):
             return (playlists, unit_test_writing_funcs)
 
 
-def write_unit_test_to_file(test_name, playlist_ids_string):
+def write_unit_test_to_file(test_name, playlist_ids_string, all_playlists):
     test_id = random.randint(1, 5000)
     unit_test_filepath = pathlib.Path('.') / "{}.json".format(test_id)
 
     playlist_ids = [s.strip() for s in playlist_ids_string.split(',')]
 
+    for playlist_id in playlist_ids:
+        # get the playlist, and collect the entity id of all exercises
+        # in that playlist
+        playlist = all_playlists[playlist_id]
+        exercise_ids = [
+            entity['entity_id'] for entity
+            in playlist['entries']
+            if entity['entity_kind'] == 'Exercise'
+        ]
+
     unit_test_data = {
         'title': test_name,
-        'ids': playlist_ids,
+        'ids': exercise_ids,
         'seed': random.randint(1, 5000),
         'repeats': 1,
     }
@@ -223,13 +233,20 @@ def main_tsv_playlists():
     test_writing_partials = []
     fsm = initialize_fsm()
     for tsv_file in tsv_files:
-        playlists_this_file, test_fns = generate_playlist_from_tsv(tsv_file, fsm)
+        playlists_this_file, test_fns = generate_playlist_from_tsv(
+            tsv_file,
+            fsm
+        )
         playlists.extend(playlists_this_file)
         test_writing_partials.extend(test_fns)
 
     # execute the unit test writes
     for test_writing_fn in test_writing_partials:
-        test_writing_fn()
+        # transform the playlists list into a dict first with the
+        # playlist id as key, so searching for playlists will be more
+        # efficient
+        playlists_dict = {pl["id"]: pl for pl in playlists}
+        test_writing_fn(all_playlists=playlists_dict)
 
     # write the playlists to the playlist json
     with open(playlist_json_filepath.as_posix(), 'w') as f:
