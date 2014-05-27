@@ -206,4 +206,5 @@ def main_tsv_playlists():
 
 
 if __name__ == '__main__':
+    random.seed(1026)
     main_tsv_playlists()
