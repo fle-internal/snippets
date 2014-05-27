@@ -1,28 +1,28 @@
 Index	Link	Playlist ID	Optional/Essential (O/E)
-			
+
 	Baseline exam	Same as TFI/Akanksha baseline assessments	E
-			
+
 	Playlist 1: Read/write 4 digit numbers; place value and face value; expanded form of numbers	g3_p1	E
-	Subtitle: Week 1		
+	Subtitle: Week 1
 Video 1	/v/place-value-1/	g3_p1	E
 Video 2	/v/place-value-3/	g3_p1	E
 Video 3	/v/representing-numbers/	g3_p1	E
 Video 4	/v/comparing-place-values/	g3_p1	E
 Exercise 1	/e/place_value/ 	g3_p1	E
-			
+
 	Playlist 2: Identify numbers that are <, >, =; ascending and descending numbers	g3_p2	E
 Video 1	/v/greater-than-and-less-than-symbols/	g3_p2	E
 Exercise 1	/e/comparing_whole_numbers/	g3_p2	E
-	Subtitle: Week 2		
+	Subtitle: Week 2
 Video 2	/v/plotting-inequalities-on-a-number-line/	g3_p2	E
 Video 3	/v/writing-numerical-inequalities-exercise/	g3_p2	E
 Video 4	/v/inequalities-in-one-variable-1-exercise/	g3_p2	E
 Video 5	/v/inequalities-on-a-number-line/	g3_p2	E
 Exercise 2	/e/inequalities_on_a_number_line/	g3_p2	E
 	Quiz 1	g3_p1, g3_p2	E
-			
+
 	Playlist 3: Write place value/face value and expanded form of 3/4 digit numbes	g3_p3	E
-	Subtitle: Week 4		
+	Subtitle: Week 4
 Video 1	 /v/place-value-1/	g3_p3	E
 Video 2	/v/place-value-3/	g3_p3	E
 Video 3	/v/representing-numbers/	g3_p3	E
@@ -34,16 +34,16 @@ Video 6	/v/regrouping-whole-numbers/	g3_p3	E
 Video 7	/v/regrouping-whole-numbers-example-1/	g3_p3	E
 Video 8	/v/regrouping-whole-numbers-example-2/	g3_p3	E
 	Quiz 2	g3_p3	E
-			
+
 	Playlist 4: Addition without carryover	g3_p4	E
-	Subtitle: Week 5		
+	Subtitle: Week 5
 Video 1	/v/basic-addition/	g3_p4	E
 Exercise 1	/e/addition_1/	g3_p4	E
 Video 2	/v/adding-whole-numbers-and-applications-1/	g3_p4	E
-	Unit Test-1	g3_p1, g3_p2, gr_p3, g3_p4	
-			
+	Unit Test-1	g3_p1, g3_p2, g3_p3, g3_p4
+
 	Playlist 5: Write and retell multiplication tables	g3_p5	E
-	Subtitle: Week 6		
+	Subtitle: Week 6
 Video 1	/v/multiplication-intro/	g3_p5	E
 Video 2	/v/multiplication-as-groups-of-objects/	g3_p5	E
 Video 3	/v/more-on-the-concept-of-multiplication/	g3_p5	E
@@ -55,9 +55,9 @@ Video 8	 /v/multiplication-3--10-11-12-times-tables/	g3_p5	E
 Exercise 1	/e/number_line/	g3_p5	E
 Exercise 2	/e/multiplication_0.5/	g3_p5	E
 	Quiz 3	g3_p4, g3_p5	E
-			
+
 	Playlist 6: Identify sides, vertices, edges	g3_p6	E
-	Subtitle: Week 7		
+	Subtitle: Week 7
 Video 1	 /v/measuring-segments/	g3_p6	E
 Video 2	/v/congruent-segments/	g3_p6	E
 Exercise 1	/e/measuring_segments/	g3_p6	E
@@ -72,18 +72,18 @@ Exercise 3	/e/conditional_statements_2/	g3_p6	O
 Exercise 4	/e/logical_arguments_deductive_reasoning/	g3_p6	O
 	Quiz 4	g3_p6	E
 	Unit Test-2	g3_p5, g3_p6, g3_p7	E
-			
+
 	Playlist 7: Subtraction without borrowing	g3_p7	E
-	Subtitle: Week 9		
+	Subtitle: Week 9
 Video 1	/v/basic-subtraction/	g3_p7	E
 Exercise 1	/e/subtraction_1/	g3_p7	E
 Video 2	/v/subtraction-2/	g3_p7	E
 Video 3	/v/subtracting-whole-numbers/	g3_p7	E
 Exercise 2	/e/subtraction_2/	g3_p7	E
-			
-			
+
+
 	Playlist 8: Addition with carryover	g3_p8	E
-	Subtitle: Week 15		
+	Subtitle: Week 15
 Video 1	/v/level-2-addition/	g3_p8	E
 Exercise 1	/e/addition_2/	g3_p8	E
 Video 2	/v/carrying-when-adding-three-digit-numbers/	g3_p8	E
@@ -94,9 +94,9 @@ Exercise 2	/e/addition_3/	g3_p8	E
 Exercise 3	/e/addition_4/	g3_p8	E
 	Quiz 5	g3_p7, g3_p8	E
 	Unit Test-4	g3_p7, g3_p8	E
-			
+
 	Playlist 9: Subtraction with borowing	g3_p9	E
-	Subtitle: Week 19		
+	Subtitle: Week 19
 Video 1	/v/basic-regrouping-or-borrowing-when-subtracting-three-digit-numbers/	g3_p9	E
 Video 2	/v/regrouping-when-subtracting-three-digit-numbers/	g3_p9	E
 Video 3	/v/regrouping-twice-when-subtracting-three-digit-numbers/	g3_p9	E
@@ -108,14 +108,14 @@ Video 8	/v/alternate-mental-subtraction-method/	g3_p9	E
 Exercise 1	/e/subtraction_3/	g3_p9	E
 Exercise 2	/e/subtraction_4/	g3_p9	E
 	Quiz 6	g3_p9	E
-			
+
 	Playlist 10: Word problems with one or more operations	g3_p10	E
 Video 1	/v/subtraction-word-problem/	g3_p10	E
 Exercise 1	 /e/arithmetic_word_problems_1/	g3_p10	E
 	Unit Test-5	g3_p9, g3_p10	E
-			
+
 	Playlist 11: Multi digit ultiplication without carryover	g3_p11	O
-	Subtitle: Week 20		
+	Subtitle: Week 20
 Video 1	/v/multiplying-by-multiples-of-10/	g3_p11	O
 Video 2	/v/2-digit-times-1-digit-example-no-carrying/	g3_p11	O
 Video 3	/v/3-digit-times-1-digit-example-no-carrying/	g3_p11	O
@@ -127,17 +127,17 @@ Video 8	/v/why-lattice-multiplication-works/	g3_p11	O
 Exercise 1	/e/multiplication_1/	g3_p11	O
 Exercise 2	/e/multiplication_1.5/	g3_p11	O
 Exercise 3	/e/multiplication_2/	g3_p11	O
-			
+
 	Playlist 12: Telling time	g3_p12	E
-	Subtitle: Week 21		
+	Subtitle: Week 21
 Video 1	/v/telling-time-exercise-example-1/	g3_p12	E
 Video 2	/v/telling-time-exercise-example-2/	g3_p12	E
 Exercise 1	/e/telling_time_0.5/	g3_p12	E
 Exercise 2	/e/telling_time/	g3_p12	E
 Exercise 3	/e/telling_time_2/	g3_p12	E
 	Quiz 7	g3_p12	E
-			
-	Playlist 13: Represent fractions using numerator/denominator format	g3_p13	
+
+	Playlist 13: Represent fractions using numerator/denominator format	g3_p13
 	Subtitle: Week 22		E
 Video 1	/v/introduction-to-fractions/	g3_p13	E
 Video 2	/v/identifying-fraction-parts/	g3_p13	E
