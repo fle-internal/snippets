@@ -174,8 +174,10 @@ def generate_playlist_from_tsv(tsv_path, fsm):
                 continue
 
             elif 'unit test' in row['Link'].lower():
+                grade_level = tsv_path.stem
                 unit_test_func = functools.partial(
                     write_unit_test_to_file,
+                    grade_level=grade_level,
                     test_name=row['Link'],
                     playlist_ids_string=row['Playlist ID']
                 )
@@ -197,9 +199,17 @@ def generate_playlist_from_tsv(tsv_path, fsm):
             return (playlists, unit_test_writing_funcs)
 
 
-def write_unit_test_to_file(test_name, playlist_ids_string, all_playlists):
+def write_unit_test_to_file(test_name,
+                            grade_level,
+                            playlist_ids_string,
+                            all_playlists):
     test_id = random.randint(1, 5000)
     unit_test_filepath = pathlib.Path('.') / "{}.json".format(test_id)
+
+    full_test_name = "{grade}: {test_name}".format(
+        grade=grade_level,
+        test_name=test_name
+    )
 
     playlist_ids = [s.strip() for s in playlist_ids_string.split(',')]
 
@@ -212,9 +222,13 @@ def write_unit_test_to_file(test_name, playlist_ids_string, all_playlists):
             in playlist['entries']
             if entity['entity_kind'] == 'Exercise'
         ]
+        exercise_ids = map(
+            lambda s: s.replace('/e/', '').strip('/ '),
+            exercise_ids
+        )
 
     unit_test_data = {
-        'title': test_name,
+        'title': full_test_name,
         'ids': exercise_ids,
         'playlist_ids': playlist_ids,
         'seed': random.randint(1, 5000),
