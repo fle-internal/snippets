@@ -227,7 +227,7 @@ def write_unit_test_to_file(test_name, playlist_ids_string, all_playlists):
 
 def main_tsv_playlists():
     cwd = pathlib.Path('.')
-    tsv_files = cwd.glob("*Playlists.tsv")
+    tsv_files = cwd.glob("grade*.tsv")
     playlist_json_filepath = cwd / 'playlists.json'
 
     playlists = []
