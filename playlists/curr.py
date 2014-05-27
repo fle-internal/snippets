@@ -2,6 +2,7 @@ import csv
 import fysom
 import json
 import pathlib
+import random
 from pprint import pprint
 
 
@@ -171,9 +172,10 @@ def generate_playlist_from_tsv(tsv_path, fsm):
                 continue
 
             elif 'unit test' in row['Link'].lower():
-                # Skip for now
-                # TODO: handle this
-                continue
+                write_unit_test_to_file(
+                    test_name=row['Link'],
+                    playlist_ids_string=row['Playlist ID'],
+                )
 
             # Whatever is that we get here, we don't understand it.
             # Print it out if it's not empty.
@@ -188,6 +190,23 @@ def generate_playlist_from_tsv(tsv_path, fsm):
         else:
             playlists.append(current_playlist)
             return playlists
+
+
+def write_unit_test_to_file(test_name, playlist_ids_string):
+    test_id = random.randint(1, 5000)
+    unit_test_filepath = pathlib.Path('.') / "{}.json".format(test_id)
+
+    playlist_ids = [s.strip() for s in playlist_ids_string.split(',')]
+
+    unit_test_data = {
+        'title': test_name,
+        'ids': playlist_ids,
+        'seed': random.randint(1, 5000),
+        'repeats': 1,
+    }
+
+    with open(unit_test_filepath.as_posix(), 'w') as f:
+        json.dump(unit_test_data, f)
 
 
 def main_tsv_playlists():
