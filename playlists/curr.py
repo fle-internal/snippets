@@ -1,4 +1,5 @@
 import csv
+import functools
 import fysom
 import json
 import pathlib
@@ -122,6 +123,7 @@ def generate_playlist_from_tsv(tsv_path, fsm):
 
         current_playlist = {}
         playlists = []
+        unit_test_writing_funcs = []
         event_default_args = {
             'playlists': playlists,
             'playlist': current_playlist
@@ -172,10 +174,13 @@ def generate_playlist_from_tsv(tsv_path, fsm):
                 continue
 
             elif 'unit test' in row['Link'].lower():
-                write_unit_test_to_file(
+                unit_test_func = functools.partial(
+                    write_unit_test_to_file,
                     test_name=row['Link'],
-                    playlist_ids_string=row['Playlist ID'],
+                    playlist_ids_string=row['Playlist ID']
                 )
+
+                unit_test_writing_funcs.append(unit_test_func)
 
             # Whatever is that we get here, we don't understand it.
             # Print it out if it's not empty.
@@ -189,7 +194,7 @@ def generate_playlist_from_tsv(tsv_path, fsm):
 
         else:
             playlists.append(current_playlist)
-            return playlists
+            return (playlists, unit_test_writing_funcs)
 
 
 def write_unit_test_to_file(test_name, playlist_ids_string):
@@ -215,11 +220,18 @@ def main_tsv_playlists():
     playlist_json_filepath = cwd / 'playlists.json'
 
     playlists = []
+    test_writing_partials = []
     fsm = initialize_fsm()
     for tsv_file in tsv_files:
-        playlists_this_file = generate_playlist_from_tsv(tsv_file, fsm)
+        playlists_this_file, test_fns = generate_playlist_from_tsv(tsv_file, fsm)
         playlists.extend(playlists_this_file)
+        test_writing_partials.extend(test_fns)
 
+    # execute the unit test writes
+    for test_writing_fn in test_writing_partials:
+        test_writing_fn()
+
+    # write the playlists to the playlist json
     with open(playlist_json_filepath.as_posix(), 'w') as f:
         json.dump(playlists, f)
 
