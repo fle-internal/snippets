@@ -193,6 +193,7 @@ def generate_playlist_from_tsv(tsv_path, fsm):
 def main_tsv_playlists():
     cwd = pathlib.Path('.')
     tsv_files = cwd.glob("*Playlists.tsv")
+    playlist_json_filepath = cwd / 'playlists.json'
 
     playlists = []
     fsm = initialize_fsm()
@@ -200,7 +201,8 @@ def main_tsv_playlists():
         playlists_this_file = generate_playlist_from_tsv(tsv_file, fsm)
         playlists.extend(playlists_this_file)
 
-    pprint(json.dumps(playlists))
+    with open(playlist_json_filepath.as_posix(), 'w') as f:
+        json.dump(playlists, f)
 
 
 if __name__ == '__main__':
