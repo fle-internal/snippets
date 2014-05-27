@@ -216,6 +216,7 @@ def write_unit_test_to_file(test_name, playlist_ids_string, all_playlists):
     unit_test_data = {
         'title': test_name,
         'ids': exercise_ids,
+        'playlist_ids': playlist_ids,
         'seed': random.randint(1, 5000),
         'repeats': 1,
     }
