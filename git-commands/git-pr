@@ -20,3 +20,6 @@ cd /tmp
 
 # create pull request
 google-chrome "https://github.com/$project/compare/$upstream_repo:$upstream_branch...$branch"
+
+# Go back again
+cd -
